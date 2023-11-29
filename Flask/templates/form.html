@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculate average marks</h1>
+
+        <form action="{{url_for('form')}}" method="post">
+            <input type="text" name="maths" placeholder="Maths" required>
+            <input type="text" name="science" placeholder="Scicnce" required>
+            <input type="text" name="history" placeholder="History" required>
+
+            <button class="btn btn-primary btn-block btn-large">Calculator Button</button>
+        
+            <br>
+            <h2>The average marks is {{score}}</h2>
+        </form>
+    </div>
+</body>
+</html>
