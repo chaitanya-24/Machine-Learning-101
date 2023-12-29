@@ -47,7 +47,7 @@ def calculate_sum():
     data = request.get_json()
     a_val = float(dict(data)['a'])
     b_val = float(dict(data)['b'])
-    return jsonify(a_val+b_val)
+    return jsonify(a_val-b_val)
 
 
 if __name__ == '__main__':
