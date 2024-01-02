@@ -1,6 +1,5 @@
 ### **Introduction**
 
-- The video is about performing deployments in various cloud platforms, focusing on Azure.
 - The process involves creating a Docker image, pushing it to the Azure Container Registry, and deploying it to an Azure Web App.
 
 ### **Steps for Azure Deployment**
@@ -44,4 +43,3 @@
 ### **Conclusion**
 
 - The deployment process involves creating a Docker image, pushing it to the Azure Container Registry, and deploying it to an Azure Web App.
-- Following the steps outlined in the video allows for seamless deployment in Azure.
