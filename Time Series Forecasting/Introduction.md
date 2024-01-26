@@ -1,4 +1,4 @@
-Introduction to Time Series Forecasting:
+#Introduction to Time Series Forecasting:
 
 **Definition of Time Series Data:**
 Time series data is a sequence of observations recorded at regular time intervals. These observations are typically ordered chronologically, and the data points can represent any measurable quantity, such as stock prices, temperature, sales figures, or other variables that change over time. The primary characteristic of time series data is its temporal ordering, which allows analysts to identify patterns, trends, and dependencies over time.
