@@ -1,4 +1,3 @@
-Certainly! Here's a tabular cheat sheet for NumPy covering essential operations commonly used in Machine Learning and Data Science:
 
 | Operation                 | Description                                      | Example                                    |
 |---------------------------|--------------------------------------------------|--------------------------------------------|
