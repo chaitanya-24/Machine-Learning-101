@@ -1,4 +1,6 @@
-Hyperparameter tuning is a crucial step in building effective Random Forest models, both for classification and regression. Properly tuning the hyperparameters can significantly improve the model's performance. Below is a detailed guide on the key hyperparameters for Random Forest Classifier and Regressor, including their descriptions, typical values, and how to tune them.
+# Hyperparameter tuning
+
+**Hyperparameter tuning** is a crucial step in building effective Random Forest models, both for classification and regression. Properly tuning the hyperparameters can significantly improve the model's performance. Below is a detailed guide on the key hyperparameters for Random Forest Classifier and Regressor, including their descriptions, typical values, and how to tune them.
 
 ### Random Forest Classifier Hyperparameters
 
