@@ -23,7 +23,7 @@ Now, let's break down these components further:
   - In an additive model, the magnitude of the components remains relatively constant over time.
 
 - **Multiplicative Model:**
-  - The time series is considered as the product of its components: \(Y(t) = Trend \times Seasonality \times Cycle \times Irregular\).
+  - The time series is considered as the product of its components: \(Y(t) = Trend * times Seasonality * times Cycle * times Irregular\).
   - In a multiplicative model, the magnitude of the components varies with the level of the time series.
 
 Understanding these components is crucial for time series analysis, as it allows analysts to separate the various influences and make more accurate forecasts. Techniques such as decomposition methods, moving averages, and exponential smoothing are often employed to identify and isolate these components for better analysis and forecasting.
