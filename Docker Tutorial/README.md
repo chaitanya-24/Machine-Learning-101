@@ -6,7 +6,11 @@
 
 ## docker images - Show Images
 
-## docker ps - Show Containers 
+## docker ps - Show Runnning Containers   
+
+## docker ps -a {Shows all container}
+
+## docker stop <hash-id of container>
 
 ## docker push docker-appname:latest
 
