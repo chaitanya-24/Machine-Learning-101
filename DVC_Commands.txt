@@ -1,0 +1,54 @@
+       git init
+  507  clear
+  508  dvc init
+  509  git status
+  510  git commit -m "Initialize DVC"
+  511  dvc add data/data.csv
+  512  git add data/data.csv.dvc data/.gitignore
+  513  git commit -m "Add raw data"
+  514  git status
+  515  dvc add data/data.csv
+  516  git status
+  517  dvc add data/data.csv
+  518  git add data/data.csv.dvc
+  519  git commit -m 'first commit'
+  520  git status
+  521  git add data/data.csv.dvc
+  522  git commit -m 'first commit'
+  523  dvc add data/data.csv
+  524  git add data/data.csv.dvc
+  525  git commit -m 'second commit'
+  526  git status
+  527  dvc add data/data.csv
+  528  dvc add data/data.csv
+  529  git add data/data.csv.dvc
+  530  git commit -m 'third commit'
+  531  git loh
+  532  git log
+  533  git checkout c9aa69e5
+  534  git checkout c9aa69e5
+  535  git checkout HEAD
+  536  git checkout master
+  537  git checkout c9aa6
+  538  dvc checkout
+  539  git checkout aa6d80e8
+  540  dvc checkout
+  541  git checkout master
+  542  dvc checkout
+  543  git log
+  544  mkdir %TEMP%/dvcstore
+  545  mkdir /tmp/dvcstore
+  546  ls
+  547  dvc remote add -d myremote /tmp/dvcstore
+  548  ls
+  549  dvc push
+  550  dvc remote add -d myremote2 myremotestorage
+  551  dvc push
+  552  dvc add data/data.csv
+  553  git add data/data.csv.dvc
+  554  git commit -m 'latest commit'
+  555  dvc push
+
+
+  556  dvc repro
+  557  dvc dag 
