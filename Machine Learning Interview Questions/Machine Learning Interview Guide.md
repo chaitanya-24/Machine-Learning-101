@@ -430,7 +430,7 @@ Entropy is a key concept in decision trees, serving as a measure of impurity or 
 
 Entropy quantifies the uncertainty or disorder in a dataset. In the context of decision trees, it is calculated for a set of instances and reflects how mixed the classes are. The formula for entropy H is given by:
 
-![Entropy](Entropy.png)
+![alt text](assets/Entropy.png)
 
 In decision trees, entropy is used to evaluate the purity of the nodes. A node with low entropy (close to 0) indicates that the instances are predominantly of one class, while high entropy (close to 1) suggests a mix of classes. The decision tree algorithm uses entropy to select the attribute that reduces uncertainty the most, leading to the highest information gain when splitting the data at each node.
 
@@ -444,7 +444,7 @@ For example, if a feature represents age, the decision tree might evaluate split
 
 Information gain measures the reduction in entropy achieved by splitting a dataset based on a particular attribute. It quantifies how much knowing the value of an attribute improves our understanding of the target variable.
 
-![alt text](<Information Gain.png>)
+![alt text](<assets/Information Gain.png>)
 
 In decision tree construction, the algorithm selects the attribute with the highest information gain for splitting at each node. This process continues recursively until the tree reaches a stopping criterion, such as a maximum depth or a minimum number of instances per leaf node.
 
@@ -760,7 +760,7 @@ The choice between ridge regression and lasso regression depends on the specific
 
 The R-squared statistic in linear regression measures the proportion of the variance in the response variable that is explained by the predictor variables in the model. It ranges from 0 to 1, with 0 indicating that the model does not explain any of the variance in the response variable, and 1 indicating that the model explains all of the variance.
 
-![alt text](R2Score.png)
+![alt text](assets/R2Score.png)
 
 R-squared is useful for assessing the goodness of fit of the model, but it has some limitations:
 
