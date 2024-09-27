@@ -1,0 +1,219 @@
+[2024-09-01T13:17:13.496+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-01T13:17:13.515+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.train_model manual__2024-09-01T13:17:05.698865+00:00 [queued]>
+[2024-09-01T13:17:13.525+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.train_model manual__2024-09-01T13:17:05.698865+00:00 [queued]>
+[2024-09-01T13:17:13.526+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-01T13:17:13.539+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): train_model> on 2024-09-01 13:17:05.698865+00:00
+[2024-09-01T13:17:13.548+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=672) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-01T13:17:13.551+0000] {standard_task_runner.py:72} INFO - Started process 681 to run task
+[2024-09-01T13:17:13.550+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'train_model', 'manual__2024-09-01T13:17:05.698865+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpimv7pxq6']
+[2024-09-01T13:17:13.552+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask train_model
+[2024-09-01T13:17:13.611+0000] {task_command.py:467} INFO - Running <TaskInstance: ml_pipeline.train_model manual__2024-09-01T13:17:05.698865+00:00 [running]> on host bb7792a7b380
+[2024-09-01T13:17:14.136+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-01T13:17:05.698865+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-01T13:17:05.698865+00:00'
+[2024-09-01T13:17:14.138+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-01T13:17:14.139+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-01T13:17:14.139+0000] {logging_mixin.py:190} INFO - Current task name:train_model state:running start_date:2024-09-01 13:17:13.516385+00:00
+[2024-09-01T13:17:14.140+0000] {logging_mixin.py:190} INFO - Dag name:ml_pipeline and current dag run status:running
+[2024-09-01T13:17:14.140+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-01T13:17:14.177+0000] {python.py:240} INFO - Done. Returned value was: {'model_path': 'Airflow/data/decision_tree_model.pkl', 'X_test':      sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
+73                 6.1               2.8                4.7               1.2
+18                 5.7               3.8                1.7               0.3
+118                7.7               2.6                6.9               2.3
+78                 6.0               2.9                4.5               1.5
+76                 6.8               2.8                4.8               1.4
+31                 5.4               3.4                1.5               0.4
+64                 5.6               2.9                3.6               1.3
+141                6.9               3.1                5.1               2.3
+68                 6.2               2.2                4.5               1.5
+82                 5.8               2.7                3.9               1.2
+110                6.5               3.2                5.1               2.0
+12                 4.8               3.0                1.4               0.1
+36                 5.5               3.5                1.3               0.2
+9                  4.9               3.1                1.5               0.1
+19                 5.1               3.8                1.5               0.3
+56                 6.3               3.3                4.7               1.6
+104                6.5               3.0                5.8               2.2
+69                 5.6               2.5                3.9               1.1
+55                 5.7               2.8                4.5               1.3
+132                6.4               2.8                5.6               2.2
+29                 4.7               3.2                1.6               0.2
+127                6.1               3.0                4.9               1.8
+26                 5.0               3.4                1.6               0.4
+128                6.4               2.8                5.6               2.1
+131                7.9               3.8                6.4               2.0
+145                6.7               3.0                5.2               2.3
+108                6.7               2.5                5.8               1.8
+143                6.8               3.2                5.9               2.3
+45                 4.8               3.0                1.4               0.3
+30                 4.8               3.1                1.6               0.2, 'y_test': 73     1
+18     0
+118    2
+78     1
+76     1
+31     0
+64     1
+141    2
+68     1
+82     1
+110    2
+12     0
+36     0
+9      0
+19     0
+56     1
+104    2
+69     1
+55     1
+132    2
+29     0
+127    2
+26     0
+128    2
+131    2
+145    2
+108    2
+143    2
+45     0
+30     0
+Name: target, dtype: int64}
+[2024-09-01T13:17:14.227+0000] {xcom.py:690} ERROR - Object of type Series is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-09-01T13:17:14.230+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 190, in serialize
+    raise TypeError(f"cannot serialize object of type {cls}")
+TypeError: cannot serialize object of type <class 'pandas.core.series.Series'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3629, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 94, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Series is not JSON serializable
+[2024-09-01T13:17:14.263+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-09-01T13:17:14.264+0000] {logging_mixin.py:190} INFO - Task start:2024-09-01 13:17:13.516385+00:00 end:2024-09-01 13:17:14.263229+00:00 duration:0.746844
+[2024-09-01T13:17:14.265+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): train_model> dag:<DAG: ml_pipeline> dagrun:<DagRun ml_pipeline @ 2024-09-01 13:17:05.698865+00:00: manual__2024-09-01T13:17:05.698865+00:00, state:running, queued_at: 2024-09-01 13:17:05.721929+00:00. externally triggered: True>
+[2024-09-01T13:17:14.266+0000] {logging_mixin.py:190} INFO - Failure caused by Object of type Series is not JSON serializable
+[2024-09-01T13:17:14.267+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=ml_pipeline, task_id=train_model, run_id=manual__2024-09-01T13:17:05.698865+00:00, execution_date=20240901T131705, start_date=20240901T131713, end_date=20240901T131714
+[2024-09-01T13:17:14.291+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-01T13:17:14.292+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 29 for task train_model (Object of type Series is not JSON serializable; 681)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 190, in serialize
+    raise TypeError(f"cannot serialize object of type {cls}")
+TypeError: cannot serialize object of type <class 'pandas.core.series.Series'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3149, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3173, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3629, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 94, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Series is not JSON serializable
+[2024-09-01T13:17:14.329+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2024-09-01T13:17:14.358+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-01T13:17:14.360+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

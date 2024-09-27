@@ -1,0 +1,5 @@
+apache-airflow
+numpy
+scikit-learn
+pandas
+pickle
